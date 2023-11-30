@@ -30,7 +30,7 @@ From this table above we can analyze and conclude, there is a massive drop in re
 
 ## Hypothesis
 What could possibly the main reason we have so low retention rate?
-After exploring data I used Univariate analysis, which analyzes the columns separately and looks at the distribution of the data. Then I would check the status of order_items data and check the total number of orders that exist in each status, at the time is the reason why a lot of cohort size have drop retention on the first month after their order.
+After exploring data I used Univariate analysis, which analyzes the columns separately and looks at the distribution of the data. I check the status of order_items data and check the total number of orders that exist in each status, at the time is the reason why a lot of cohort size have drop retention on the first month after their order.
 
 ![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic4.png?raw=true)
 
