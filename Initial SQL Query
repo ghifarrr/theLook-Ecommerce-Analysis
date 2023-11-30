@@ -1,0 +1,54 @@
+##1.Use table “Orders" to create monthly retention cohorts (the groups, or cohorts, can be defines based upon the date that user/customer start to order) and then how many of them (%) coming back for the following months in 2022. After analysing the retention cohort, is there any interesting insight that we can get? notes: initial start date can be defined using first order date from each customer in Order table(expented Output: First Month, Number of Users, Active Post Month,Number of User that Reorder, Percentage of Cohort
+WITH cohort_customer AS(
+   SELECT
+    user_id AS customer_id,
+    MIN(DATE(DATE_TRUNC(created_at, month))) as First_Date
+   FROM `bigquery-public-data.thelook_ecommerce.orders`
+   GROUP BY 1
+),
+user_activities AS (
+   SELECT
+      ord.user_id AS customer_id,
+      DATE_DIFF(DATE(DATE_TRUNC(created_at, Month)), crt.First_Date,Month) AS month_number
+   FROM `bigquery-public-data.thelook_ecommerce.orders` ord
+   LEFT JOIN `cohort_customer` AS crt
+   ON ord.user_id = crt.customer_id
+   WHERE EXTRACT(YEAR from crt.First_Date) = 2022 AND EXTRACT(YEAR FROM ord.created_at) = 2022
+   GROUP BY 1,2
+),
+cohort_size AS (
+   SELECT
+      First_Date,
+      COUNT(First_Date) AS number_user
+   FROM cohort_customer 
+   GROUP BY 1
+),
+retention_table AS (
+   SELECT 
+     c.First_Date,
+     a.month_number,
+     COUNT(First_Date) AS number_user
+   FROM user_activities AS a
+   LEFT JOIN cohort_customer AS c
+   ON a.customer_id = c.customer_id
+   GROUP BY 1,2
+)
+SELECT
+  b.First_Date,
+  s.number_user AS cohort_size,
+  b.month_number,
+  b.number_user AS total_users,
+  CAST(b.number_user AS decimal)/s.number_user AS percentage
+FROM retention_table AS b
+LEFT JOIN cohort_size AS s
+ON b.First_Date = s.First_Date
+WHERE b.First_Date IS NOT NULL
+ORDER BY 1,3;
+
+#Another explanation
+SELECT 
+ord.status,
+COUNT(ord.status) total_status
+FROM `bigquery-public-data.thelook_ecommerce.order_items` ord
+WHERE EXTRACT(YEAR FROM ord.created_at) = 2022
+GROUP BY 1;
