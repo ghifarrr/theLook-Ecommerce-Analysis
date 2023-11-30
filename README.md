@@ -37,7 +37,7 @@ After exploring data I used Univariate analysis, which analyzes the columns sepa
 The hypothesis that I get is by analyzing the data obtained from various tables on thelook ecomerce dataset, where a conclusion is obtained from a large hole that can be seen in the item order’s status column. That there are many customer item order statuses that are canceled and returned, with a canceled percentage of 15.09% and a returned percentage of 10.04%, that means 25.14% of the items seems failed to be sold, this percentage value is very huge seeing from the orders completed in 2022 only 24.85% of which the rest are still in process and shipping. 
 This indicates that the seller canceled or sent items that were not supposed to be, which can be a red flag for potential customers to return to the store or even for the reputation of thelook ecommerce it self. 
 
-![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic5.png?raw=true)
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic%205.png?raw=true)
 
 ## Recommendation
 For seller: 
