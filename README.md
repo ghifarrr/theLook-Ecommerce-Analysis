@@ -2,7 +2,7 @@
 TheLook is a fictitious eCommerce clothing site developed by the Google Looker team. The dataset contains information about customers, products, orders, logistics, web events and digital marketing campaigns. The contents of this dataset are synthetic, and are provided to industry practitioners for the purpose of product discovery, testing, and evaluation.
 At the time of this analysis, the e-commerce store recorded sales transaction data from January 2022 to December 2022. 
 
-The analysis used on theLook Ecommerce dataset is the cohort analysis method, which is a technique used to analyze and understand the behavior of a group of individuals over time. In cohort analysis, individuals are grouped based on their characteristics, such as when they signed up for a service or purchased a product. 
+This dataset can be accessed through google bigquery public data, where the query below is run with SQL Bigquery Studio. The analysis used on theLook Ecommerce dataset is the cohort analysis method, which is a technique used to analyze and understand the behavior of a group of individuals over time. In cohort analysis, individuals are grouped based on their characteristics, such as when they signed up for a service or purchased a product. 
 And what is done in this project is Cohort retention rate analysis which is a metric that measures the percentage of customers who continue to repurchase with a company over time. To calculate the cohort retention rate, a business first defines a cohort of customers based on a common characteristic or behavior, such as the month in which they made their first purchase.
 
 ## Scope of Problem
