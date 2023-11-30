@@ -43,5 +43,6 @@ This indicates that the seller canceled or sent items that were not supposed to 
 For seller: 
 - It is important for the seller to monitor its cancellation rate and better understand how to reduce it if it exceeds the required threshold. 
 - A high cancellation rate can be caused by many factors such as poor inventory management, product listing errors, or communication issues with customers,etc. By improving these areas, sellers can reduce the cancellation and return rates thus providing a better experience for their customers.
+
 For thelook ecommerce:
 - Thelook has the right to make regulations that benefit both buyers and sellers. So it is necessary to make rules that set limits on stores canceling orders unilaterally and conduct further analysis if a store often experiences returns from buyers.
