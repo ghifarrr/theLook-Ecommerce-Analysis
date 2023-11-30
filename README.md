@@ -10,8 +10,8 @@ How many users coming back to reorder for the following months in 2022?
 
 Solution:
 
-Pic1
-pic2
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic1.png?raw=true)
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic2.png?raw=true)
 
 This query above is used to analyze the user retention rate for theLook E-Commerce. 
 The query is composed of several Common Table Expressions (CTEs), which are similar to subqueries but allow you to name and reuse the results.
@@ -24,7 +24,7 @@ The query is composed of several Common Table Expressions (CTEs), which are simi
 Finally, the query joins the retention_table with the cohort_size table to calculate the retention rate. It returns the first purchase date, cohort size, month number, total number of users, and the percentage of users who made a purchase within that month.
 The output of this query is used to analyze user retention patterns and identify areas for improvement. Where the output results of this query are moved to Google Sheets, the results are processed with a pivot table to produce a table in the form of a period table, which contains the number of users along with the user retention rate every month in 2022.
  
- pic3
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic3.png?raw=true)
 
 From this table above we can analyze and conclude, there is a massive drop in retention rates entering the first month since they first placed an order. It can be seen in the cohort table above that the average user retention rate drops drastically from 100% to ±3% in the next month, it can be concluded that users are returning less and less since they first placed an order. However, each cohort's retention rate has increased and decreased steadily at 2.94% - 3.69% every month from the beginning of the user's order. We can see that the August to November cohort has a higher retention rate than the previous months, where the retention rate value is at 2.77% - 4.83% in the month after the first user places an order. Then we can find out that the September cohort has the largest retention rate after its first order in the first month after its first order at 4.83%, and the March cohort has the largest decrease in user retention rate with 2.48% in its third month. Although this  retention value is a very small value that requires improvement and evaluation of a more effective business strategy.
 
@@ -32,12 +32,12 @@ From this table above we can analyze and conclude, there is a massive drop in re
 What could possibly the main reason we have so low retention rate?
 After exploring data I used Univariate analysis, which analyzes the columns separately and looks at the distribution of the data. Then I would check the status of order_items data and check the total number of orders that exist in each status, at the time is the reason why a lot of cohort size have drop retention on the first month after their order.
 
-pic4
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic4.png?raw=true)
 
 The hypothesis that I get is by analyzing the data obtained from various tables on thelook ecomerce dataset, where a conclusion is obtained from a large hole that can be seen in the item order’s status column. That there are many customer item order statuses that are canceled and returned, with a canceled percentage of 15.09% and a returned percentage of 10.04%, that means 25.14% of the items seems failed to be sold, this percentage value is very huge seeing from the orders completed in 2022 only 24.85% of which the rest are still in process and shipping. 
 This indicates that the seller canceled or sent items that were not supposed to be, which can be a red flag for potential customers to return to the store or even for the reputation of thelook ecommerce it self. 
 
-pic5
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic5.png?raw=true)
 
 ## Recommendation
 For seller: 
