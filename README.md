@@ -13,6 +13,10 @@ Solution:
 ![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic1.png?raw=true)
 ![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic2.png?raw=true)
 
+Result:
+
+![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic.png?raw=true)
+
 This query above is used to analyze the user retention rate for theLook E-Commerce. 
 The query is composed of several Common Table Expressions (CTEs), which are similar to subqueries but allow you to name and reuse the results.
 
@@ -20,8 +24,6 @@ The query is composed of several Common Table Expressions (CTEs), which are simi
 - user_activities: This CTE joins the orders table with the cohort_customer table. It then calculates the difference in months between the order's date and the user's first purchase date.
 - cohort_size: This CTE groups the cohort_customer table by the first purchase date and counts the number of users in each cohort.
 - retention_table: This CTE groups the user_activities table by the first purchase date and month number, and counts the number of users in each group.
-
-![alt text](https://github.com/ghifarrr/theLook-Ecommerce-Analysis/blob/main/Pics/pic.png?raw=true)
 
 Finally, the query joins the retention_table with the cohort_size table to calculate the retention rate. It returns the first purchase date, cohort size, month number, total number of users, and the percentage of users who made a purchase within that month.
 The output of this query is used to analyze user retention patterns and identify areas for improvement. Where the output results of this query are moved to Google Sheets, the results are processed with a pivot table to produce a table in the form of a period table, which contains the number of users along with the user retention rate every month in 2022.
